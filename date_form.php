@@ -41,6 +41,7 @@ if(isset($_POST['input_date']) && isset($_POST['submit']))
         $error = "Date entered does not match a valid calendar date.";
     }
 
+    // If there are no errors, proceed with finding next workdays
     if($error == '')
     {
       $date = new DateTime($_POST['input_date']);
