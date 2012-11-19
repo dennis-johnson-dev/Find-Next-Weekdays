@@ -1,0 +1,13 @@
+body {
+    font-size: 15px;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.error_message {
+    color: red;
+}
+
