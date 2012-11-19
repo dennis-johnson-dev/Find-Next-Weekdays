@@ -6,3 +6,8 @@ body {
 h1 {
     font-size: 20px;
 }
+
+.error_message {
+    color: red;
+}
+
