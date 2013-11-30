@@ -66,12 +66,7 @@
     </div>
     <ul id="nav" class="nav">
       <li>
-        <a href="./index.html">Home</a>
-        <ul class="child">
-          <li>
-            <a href="http://www.ucdenver.edu/academics/colleges/CLAS/Departments/chemistry/Pages/Chemistry.aspx">Chemistry Home</a>
-          </li>
-        </ul>
+        <a href="./index.php">Home</a>
       </li>
        <li>
         <a href="">Contact Us</a>
@@ -121,13 +116,16 @@ Please enter the desired date in the format of <strong>01/11/12</strong><br /> w
 </form>
 </p>
 
-<p class="error_message"></p>
+
+<p class="error_message">
 <?php
 if(isset($error))
 {
-    echo "<p class='error_message'>$error</p>";
+    echo "$error";
 }
 ?>
+</p>
+
 
 </div>
 </div
