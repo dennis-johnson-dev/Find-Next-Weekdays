@@ -1,0 +1,176 @@
+/* Globals */
+
+body {
+  background-image: url("../img/bg4.jpg");
+  background-repeat: repeat-x;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #404040;
+}
+
+p {
+  font-size: .9em;
+  margin-top: 14px;
+}
+
+h1 {
+  color: #404040;
+  margin: 1em 0 .6em;
+  padding: 0;
+  font-size: 1.75em;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+ 
+#container {
+  margin: 0 auto;
+  max-width:960px;
+  padding:0px 25px;
+}
+
+#wrapper {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  background-color:#fff;
+  border:1px solid #d6d6d6;
+  border-radius: 6px;
+  clear:both;
+  margin: 20px auto 20px auto;
+  padding: 0 20px 20px 20px;
+  position:relative;
+}
+
+#header {
+  margin:0;
+}
+
+#logo {
+  float:left;
+  margin: 15px 0 10px 0;
+}
+
+#footer {
+  clear:both;
+  margin:0 auto;
+  max-width: 960px;
+  padding: 0 25px 0 25px;
+  font-size: 11px;
+  color: #000000;
+}
+
+#footer a {
+  color: #000000;
+}
+
+#footer a:hover {
+  color: #257ed2;
+  text-decoration: none;
+}
+
+#footer img {
+  display: inline-block;
+}
+
+#footer li {
+  display: inline-block;
+}
+  
+#footer p {
+  margin: .5em 0 0 0;
+  line-height: 1.5em;
+}
+
+#footer_content {
+  padding: .2em 0 .2em 1.2em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Navigation */
+
+/* Targeting both first and second level menus */
+
+.nav li { 
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li a { 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  font-size: 13px;
+  color: #ffffff; 
+  display: block; 
+  margin: 0 -4.4px 0 0; 
+  padding: 0 0.9em; 
+  text-transform: uppercase; 
+  line-height: 45px;
+  position: relative;
+}
+
+.nav li a:hover { 
+  color: #26668d;
+  background: #e1eaf1; 
+  text-decoration: none;
+}
+
+/* Targeting the first level menu */
+ul.nav {
+  background-color: #014165;
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#014165), to (#165b85));
+  background-image:-webkit-linear-gradient(top, #014165, #165b85);
+  background-image:-moz-linear-gradient(top, #014165, #165b85);
+  background-image:-ms-linear-gradient(top, #014165, #165b85);
+  background-image:-o-linear-gradient(top, #014165, #165b85);
+  background-image:linear-gradient(top, #014165, #165b85);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#014165, endColorstr=#165b85);
+  clear: both;
+  display: block; 
+  margin: 0; 
+  padding: 0;
+  font-size: 14px;
+}
+
+/* Targeting the second level menu */
+.nav li ul { 
+  background: #e1eaf1; 
+  color: #ffffff; 
+  display: none; 
+  margin: 0; 
+  padding: 0;
+  width: 140px; 
+  position: absolute;
+  z-index:10; 
+}
+
+.nav li ul li { width: 100% }
+.nav li ul li a {
+  color: #26668d; 
+  background: none; 
+  border: none; 
+  line-height: 20px; 
+  margin: 0; 
+  padding: 5px 10px 5px 10px;  
+}
+.nav li ul li a:hover { 
+  color: #ffffff;
+  background-color: #014165;
+}
+
+/* A class of current will be added via jQuery */
+#nav li.current > a { background: #e1eaf1; color: #26668d; }
+
+/* CSS fallback */
+#nav li:hover > ul.child { display: block; }
+
+
+
