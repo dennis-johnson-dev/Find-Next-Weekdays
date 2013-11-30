@@ -39,16 +39,6 @@ if(isset($_POST['input_date']) && isset($_POST['submit']))
 
     $converted_holidays = array ();
 
-    // converts the holidays to Unix timestamps
-    /*
-    foreach($holidays as $holidays_item)
-    {
-        $holidays_date = new DateTime($holidays_item);
-        $unix_holidays_item = date_format($holidays_date, 'U');
-        $converted_holidays[] = $unix_holidays_item;
-    }
-    */
-
     // read password from file
     $pwd;
     $fh = fopen('weekdays.config','r');
@@ -209,7 +199,7 @@ if(isset($time))
   {
     foreach($weekdays as $weekday)
     {
-        echo "<li>" . date('l, M j', $weekday) . "</li>";
+        echo "<li>" . date('l, M j Y', $weekday) . "</li>";
     }
   }
 

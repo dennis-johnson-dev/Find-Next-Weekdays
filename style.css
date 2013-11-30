@@ -11,3 +11,17 @@ h1 {
     color: red;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+li input {
+  margin-right: 15px;
+}
