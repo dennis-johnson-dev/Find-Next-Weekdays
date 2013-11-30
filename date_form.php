@@ -40,12 +40,43 @@ if(isset($_POST['input_date']) && isset($_POST['submit']))
     $converted_holidays = array ();
 
     // converts the holidays to Unix timestamps
+    /*
     foreach($holidays as $holidays_item)
     {
         $holidays_date = new DateTime($holidays_item);
         $unix_holidays_item = date_format($holidays_date, 'U');
         $converted_holidays[] = $unix_holidays_item;
     }
+    */
+
+    // read password from file
+    $pwd;
+    $fh = fopen('weekdays.config','r');
+    if ($fh) {
+      while (($line = fgets($fh)) != false) {
+        $pwd = $line;  
+        // trim trailing ' ' character
+        $pwd = substr($pwd, 0, -1);
+      }
+
+      fclose($fh);
+    }
+ 
+    // gets the holiday dates from the db
+    $conn = mysql_connect("localhost", "root", $pwd);
+    $db = mysql_select_db("working_days", $conn);
+    $sql = "select unix_timestamp(date) from dates";
+
+    // make db query
+    $result = mysql_query($sql);
+    if (!$result)
+      echo mysql_error();
+
+    // place holiday timestamps into array
+    while ($row = mysql_fetch_array($result)) { 
+      $converted_holidays[] = $row[0];
+    }
+
 
     // as the script finds valid weekdays, it puts the UNIX timestamp in the weekdays array
     $weekdays = array ();
@@ -131,9 +162,11 @@ function validate() {
 <body>
 
 <h1>Routing Date Helper</h1>
+
 <form id="date_form" name="date_form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+
 <p>
-Please enter the desired date in the format of <strong>01/11/12</strong><br /> where 01 is the month (January), 11 is the day, and 12 is the year.</p>
+Please enter the desired date in the format of <strong>01/11/12</strong><br /> where 01 is the month (January), 11 is the day, and 12 (2012) is the year.</p>
 <p>Please select the format of your submission.</p>
 
 <p>
