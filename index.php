@@ -7,8 +7,8 @@
   <title>Single Page Theme</title>
   <link rel="stylesheet" type="text/css" href="css/resets.css">  
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-  <script src="js/jquery-1.6.3.min.js"></script>
   <!--JS for nav -->
   <script type="text/javascript">
     $(document).ready(function(){
@@ -23,7 +23,6 @@
     });
   </script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
     $('.to_delete').click(function(event) {
@@ -115,9 +114,9 @@ Please enter the desired date in the format of <strong>01/11/12</strong><br /> w
 
 <p>
 <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
-  <input id="submit" type="submit" name="submit" value="Add" />
   <label for="input_date">Input Date: </label>
   <input id="input_date" type="textarea" name="input_date" />
+  <input id="submit" type="submit" name="submit" value="Add" />
   <input type="submit" name="clear" value="clear" />
 </form>
 </p>
