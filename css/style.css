@@ -13,12 +13,17 @@ p {
 }
 
 h1 {
-  color: #404040;
+  color: #2D3D51;
   margin: 1em 0 .6em;
   padding: 0;
-  font-size: 1.75em;
-  font-weight: 700;
+  font-size: 1.7em;
+  font-weight: normal;
   line-height: 1em;
+}
+
+h4 {
+  font-weight: bold;
+  color: #165b85;
 }
 
 ul {
@@ -90,6 +95,7 @@ li input {
 
 #footer li {
   display: inline-block;
+  margin: 0; 
 }
   
 #footer p {
