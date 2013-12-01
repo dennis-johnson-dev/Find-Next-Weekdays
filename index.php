@@ -77,6 +77,30 @@
 <div id="content">
 <h1>Routing Helper Admin</h1>
 
+<h4>Add a date</h4>
+
+<p>
+Please enter the desired date in the format of <strong>01/11/12</strong><br /> where 01 is the month (January), 11 is the day, and 12 (2012) is the year.</p>
+
+<p>
+<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
+  <label for="input_date">Input Date: </label>
+  <input id="input_date" type="textarea" name="input_date" />
+  <input id="submit" type="submit" name="submit" value="Add" />
+  <input type="submit" name="clear" value="clear" />
+</form>
+</p>
+
+
+<p class="error_message">
+<?php
+if(isset($error))
+{
+    echo "$error";
+}
+?>
+</p>
+
 <h4>Current Holiday Dates:</h4>
 
 <ul>
@@ -103,29 +127,6 @@ if(isset($converted_holidays) && isset($ids))
 
 </ul>
 
-<h4>Add a date</h4>
-
-<p>
-Please enter the desired date in the format of <strong>01/11/12</strong><br /> where 01 is the month (January), 11 is the day, and 12 (2012) is the year.</p>
-
-<p>
-<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
-  <label for="input_date">Input Date: </label>
-  <input id="input_date" type="textarea" name="input_date" />
-  <input id="submit" type="submit" name="submit" value="Add" />
-  <input type="submit" name="clear" value="clear" />
-</form>
-</p>
-
-
-<p class="error_message">
-<?php
-if(isset($error))
-{
-    echo "$error";
-}
-?>
-</p>
 
 
 </div>
