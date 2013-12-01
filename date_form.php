@@ -161,7 +161,7 @@ Please enter the desired date in the format of <strong>01/11/12</strong><br /> w
 
 <p>
 <input type="radio" name="submission_type" value="electronic"> Electronic (12 days)
-<input type="radio" name="submission_type" value="paper"> Paper (5 days)
+<input type="radio" name="submission_type" value="paper" checked='checked'> Paper (5 days)
 </p>
 
 <p>
