@@ -136,7 +136,7 @@ $(document).ready(function(){
 });
 
 function validate() {
-    var re = /\d{2}\/\d{2}\/\d{2}/;
+    var re = /(\d{2}\/\d{2}\/\d{2})$/;
     var OK = re.test($("#input_date").val());
     if (OK) {
       return true;
