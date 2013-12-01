@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Single Page Theme</title>
+  <title>Routing Date Admin</title>
   <link rel="stylesheet" type="text/css" href="css/resets.css">  
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -41,7 +41,7 @@
   });
 
   function validate() {
-      var re = /\d{2}\/\d{2}\/\d{2}/;
+      var re = /(\d{2}\/\d{2}\/\d{2})$/;
       var OK = re.test($("#input_date").val());
       if (OK) {
         return true;
@@ -61,7 +61,7 @@
   <div id="header">
     <div id="logo">
       <a href="./index.html">
-        <img src="./img/clas_chemistry.png" width="564" height="78" />
+        <img src="./img/clas_logo_large.png" width="564" height="78" />
       </a>
     </div>
     <ul id="nav" class="nav">
@@ -75,10 +75,9 @@
 </div>
 <div id="wrapper">
 <div id="content">
-<h1>Home</h1>
-<h2>Routing Helper Admin</h2>
+<h1>Routing Helper Admin</h1>
 
-<p>Here is the current list of all days recognized as holidays:</p>
+<h4>Current Holiday Dates:</h4>
 
 <ul>
 
@@ -103,6 +102,8 @@ if(isset($converted_holidays) && isset($ids))
 ?>
 
 </ul>
+
+<h4>Add a date</h4>
 
 <p>
 Please enter the desired date in the format of <strong>01/11/12</strong><br /> where 01 is the month (January), 11 is the day, and 12 (2012) is the year.</p>
