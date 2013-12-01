@@ -191,12 +191,12 @@ if(isset($time))
 
 ?>
 
-
 <ol>
 <?php
  
   if(isset($weekdays))
   {
+    sort($weekdays);
     foreach($weekdays as $weekday)
     {
         echo "<li>" . date('l, M j Y', $weekday) . "</li>";
